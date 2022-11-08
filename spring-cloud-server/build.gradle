@@ -18,8 +18,10 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-config-server'
-//	implementation 'org.springframework.cloud:spring-cloud-config-monitor'
-//	implementation 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
+	implementation 'org.springframework.cloud:spring-cloud-config-monitor' // git hook -> server -> client
+	implementation 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' // /busrefresh server -> client
+//	implementation 'org.springframework.boot:spring-boot-starter-security' // /busrefresh server -> client
 }
 
 dependencyManagement {
